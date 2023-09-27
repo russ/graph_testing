@@ -17,6 +17,7 @@ Boot the app with `./bin/graph_test`, and then you can use `curl` to test.
 curl -H "Accept: application/json" "http://localhost:3000"
 
 curl -XPOST -H "Accept: application/json" "http://localhost:3000/api/graphql" -d '{"operationName":"Posts","variables":{},"query":"query Posts { posts { title\n releasedAt} }"}'
+curl -XPOST -H "Accept: application/json" "http://localhost:3000/api/graphql" -d '{"operationName":"Method000","variables":{},"query":"query Method000 { method000 { a\n b\n c\n d\n e\n f\n g\n h\n i\n j\n k\n l\n m\n n\n o\n p\n q\n r\n s\n t\n u\n v\n w\n x\n y\n z\n } }"}'
 ```
 
 To load test with `wrk`
