@@ -1,6 +1,6 @@
 class Api::Graphql::Create < ApiAction
   post "/api/graphql" do
-    schema = GraphQL::Schema.new(GraphQuery.new)
+    schema = GraphQL::Schema.new(GraphQuery.new, GraphMutations.new)
     parsed = params.from_json
 
     query = parsed["query"].as_s
